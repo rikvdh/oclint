@@ -1,0 +1,16 @@
+Source: oclint
+Priority: optional
+Maintainer: Rik van der Heijden <rik.vanderheijden@dualinventive.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+Section: libs
+Homepage: https://github.com/oclint/oclint
+Vcs-Git: https://github.com/oclint/oclint.git
+Vcs-Browser: https://github.com/oclint/oclint
+
+Package: oclint
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
+Description: boembats

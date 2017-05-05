@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+export CFLAGS=
+export CXXFLAGS=
+export LDFLAGS=
+export OBJCXXFLAGS=
+export OBJCFLAGS=
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	cd oclint-scripts && ./make
+
+override_dh_auto_install:
+	mkdir -p $$(pwd)/debian/oclint/opt/oclint/0.12
+	cp -r $$(pwd)/build/oclint-release/* $$(pwd)/debian/oclint/opt/oclint/0.12
+
+override_dh_auto_test:
+	echo niks
+
+override_dh_install:
+	echo niks
